@@ -3,6 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{BB23DECB-5F72-44E4-B0EC-E762FCD19DE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{3A5261E8-A921-4304-832A-295B2585DA67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{DC7D950F-5CEA-4E9C-AE9D-FE425964ECFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Data", "Infra.Data", "{61FD00BF-A827-48B0-B646-9B2E08A41E2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C17A040C-8069-4B34-ACBF-53FC9789C3D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Application", "Application\TrainingCenter.Application\TrainingCenter.Application.csproj", "{4A388142-9CDE-41BC-A0D8-3FC5D103569C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Domain", "Domain\TrainingCenter.Domain\TrainingCenter.Domain.csproj", "{1CC34624-1741-4FC6-9B26-F3AB0F14D497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Infra.Data", "Infra.Data\TrainingCenter.Infra.Data\TrainingCenter.Infra.Data.csproj", "{6CD9CDC1-5EF0-4F14-8095-28F718252F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Infra.IoC", "Infra.IoC\TrainingCenter.Infra.IoC\TrainingCenter.Infra.IoC.csproj", "{44D1A516-D8DD-427E-8CCB-1FDA146A743E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.UI.Mvc", "Presentation\TrainingCenter.UI.Mvc\TrainingCenter.UI.Mvc.csproj", "{118ABC77-FF08-49F7-AAE8-5DAA290A1B6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +30,34 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A388142-9CDE-41BC-A0D8-3FC5D103569C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A388142-9CDE-41BC-A0D8-3FC5D103569C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A388142-9CDE-41BC-A0D8-3FC5D103569C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A388142-9CDE-41BC-A0D8-3FC5D103569C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC34624-1741-4FC6-9B26-F3AB0F14D497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC34624-1741-4FC6-9B26-F3AB0F14D497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC34624-1741-4FC6-9B26-F3AB0F14D497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC34624-1741-4FC6-9B26-F3AB0F14D497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD9CDC1-5EF0-4F14-8095-28F718252F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD9CDC1-5EF0-4F14-8095-28F718252F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD9CDC1-5EF0-4F14-8095-28F718252F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD9CDC1-5EF0-4F14-8095-28F718252F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D1A516-D8DD-427E-8CCB-1FDA146A743E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D1A516-D8DD-427E-8CCB-1FDA146A743E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D1A516-D8DD-427E-8CCB-1FDA146A743E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D1A516-D8DD-427E-8CCB-1FDA146A743E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{118ABC77-FF08-49F7-AAE8-5DAA290A1B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118ABC77-FF08-49F7-AAE8-5DAA290A1B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118ABC77-FF08-49F7-AAE8-5DAA290A1B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118ABC77-FF08-49F7-AAE8-5DAA290A1B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A388142-9CDE-41BC-A0D8-3FC5D103569C} = {BB23DECB-5F72-44E4-B0EC-E762FCD19DE8}
+		{1CC34624-1741-4FC6-9B26-F3AB0F14D497} = {C17A040C-8069-4B34-ACBF-53FC9789C3D2}
+		{6CD9CDC1-5EF0-4F14-8095-28F718252F8A} = {61FD00BF-A827-48B0-B646-9B2E08A41E2F}
+		{44D1A516-D8DD-427E-8CCB-1FDA146A743E} = {DC7D950F-5CEA-4E9C-AE9D-FE425964ECFA}
+		{118ABC77-FF08-49F7-AAE8-5DAA290A1B6A} = {3A5261E8-A921-4304-832A-295B2585DA67}
 	EndGlobalSection
 EndGlobal

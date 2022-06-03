@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CourseViewModel>
+
+@{
+    ViewData["Title"] = "All Courses";
+}
+
+<h1>All Courses</h1>
+
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.Id</td>
+                <td>@course.Name</td>
+            </tr>
+        }
+    </thead>
+</table>
