@@ -17,11 +17,12 @@ namespace TrainingCenter.Infra.IoC
 		{
 			// Application Layer
 			services.AddScoped<ICourseService, CourseService>();
+			services.AddScoped<IStudentService, StudentService>();
 
 
 			// Infra.Data Layer
 			services.AddScoped<ICourseRepository, CourseRepository>();
-
+			services.AddScoped<IStudentRepository, StudentRepository>();
 
 			services.AddDbContext<TrainingCenterDbContext>(options => {
 				options.UseSqlServer(configuration.GetConnectionString("TrainingCenterDbConnection"));
