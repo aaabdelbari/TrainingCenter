@@ -10,6 +10,7 @@ namespace TrainingCenter.Application.Mapping
 		public MappingProfile()
 		{
 			CreateMap<Course, CourseViewModel>();
+			CreateMap<Student, StudentViewModel>();
 		}
 	}
 }
