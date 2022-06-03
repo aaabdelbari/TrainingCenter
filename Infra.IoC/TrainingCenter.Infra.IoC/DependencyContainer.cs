@@ -16,13 +16,15 @@ namespace TrainingCenter.Infra.IoC
 		public static IServiceCollection RegisterTrainingCenterServices(this IServiceCollection services, IConfiguration configuration)
 		{
 			// Application Layer
-			services.AddScoped<ICourseService, CourseService>();
-			services.AddScoped<IStudentService, StudentService>();
+			services.AddTransient<ICourseService, CourseService>();
+			services.AddTransient<IStudentService, StudentService>();
 
 
 			// Infra.Data Layer
-			services.AddScoped<ICourseRepository, CourseRepository>();
-			services.AddScoped<IStudentRepository, StudentRepository>();
+			services.AddTransient<IUnitOfWork, UnitOfWork>();
+			//services.AddTransient(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
+			//services.AddTransient<ICourseRepository, CourseRepository>();
+			//services.AddTransient<IStudentRepository, StudentRepository>();
 
 			services.AddDbContext<TrainingCenterDbContext>(options => {
 				options.UseSqlServer(configuration.GetConnectionString("TrainingCenterDbConnection"));

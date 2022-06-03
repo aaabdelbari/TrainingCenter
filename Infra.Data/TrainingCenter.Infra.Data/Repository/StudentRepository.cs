@@ -6,18 +6,13 @@ using TrainingCenter.Infra.Data.Context;
 
 namespace TrainingCenter.Infra.Data.Repository
 {
-	public class StudentRepository : IStudentRepository
+	public class StudentRepository : BaseRepository<Student, int>, IStudentRepository
 	{
-        private readonly TrainingCenterDbContext _context;
 
         public StudentRepository(TrainingCenterDbContext context)
+            : base(context)
 		{
-            this._context = context;
-        }
 
-        public async Task<IEnumerable<Student>> GetStudentsAsync()
-        {
-            return await _context.Students.ToListAsync();
         }
     }
 }

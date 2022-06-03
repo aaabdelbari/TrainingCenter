@@ -9,18 +9,18 @@ namespace TrainingCenter.Application.Services
 {
 	public class CourseService : ICourseService
 	{
-        private readonly ICourseRepository _repository;
+        private readonly IUnitOfWork unitOfWork;
         private readonly IMapper _mapper;
 
-        public CourseService(ICourseRepository repository, IMapper mapper)
+        public CourseService(IUnitOfWork unitOfWork, IMapper mapper)
 		{
-            this._repository = repository;
+            this.unitOfWork = unitOfWork;
             this._mapper = mapper;
         }
 
         public async Task<IEnumerable<CourseViewModel>> GetCoursesAsync()
         {
-            var courses = await _repository.GetCoursesAsync();
+            var courses = await unitOfWork.CourseRepository.GetAllAsync();
             return _mapper.Map<IEnumerable<Course>, IEnumerable<CourseViewModel>>(courses);
         }
     }

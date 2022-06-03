@@ -3,9 +3,9 @@ using TrainingCenter.Domain.Models;
 
 namespace TrainingCenter.Domain.Interfaces
 {
-	public interface ICourseRepository
+	public interface ICourseRepository : IBaseRepository<Course, int>
 	{
-		Task<IEnumerable<Course>> GetCoursesAsync();
+
 	}
 }
 
